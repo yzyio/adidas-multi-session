@@ -1,0 +1,12 @@
+# Folders
+.idea/
+venv/
+__pycache__/
+
+# Files
+phantomjs*
+chromedriver*
+geckodriver*
+*.log
+*.pyc
+.DS_Store
