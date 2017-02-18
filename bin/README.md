@@ -1,1 +1,0 @@
-Place your PhantomJS and Chromedriver executables in this folder.

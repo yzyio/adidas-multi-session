@@ -1,0 +1,3 @@
+username:password@host:port
+username:password2@host2:port
+host:portonly
