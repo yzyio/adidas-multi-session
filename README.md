@@ -1,3 +1,5 @@
+<b>UPDATE:</b> Wait for the final V0.2 release to test!
+
 <p align="center"><img src="http://tools.yzy.io/assets/github.png"></p>
 
 adidas-multi-session is a open-source program to simulate multiple sessions on adidas queue pages.
