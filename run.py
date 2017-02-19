@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
         user_agent = get_user_agent()
         desired_capabilities = get_desired_capabilities_phantom(user_agent)
-        browser = webdriver.PhantomJS(service_args=service_args, desired_capabilities=desired_capabilities)
+        browser = webdriver.PhantomJS(executable_path='bin/phantomjs', service_args=service_args, desired_capabilities=desired_capabilities)
         browser.set_page_load_timeout(30)
 
         # Proxy testing
