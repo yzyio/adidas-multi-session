@@ -1,8 +1,8 @@
 import sys, logging
 
 _V = '0.2'
-# PRODUCT_URL = 'http://www.adidas.com/yeezy'
-PRODUCT_URL = 'http://tools.yzy.io/hmac.html'
+PRODUCT_URL = 'http://www.adidas.com/yeezy'
+# PRODUCT_URL = 'http://tools.yzy.io/hmac.html'
 
 if sys.version_info <= (3, 0):
     sys.stdout.write("Could not start: requires Python 3.x, not Python 2.x\n")

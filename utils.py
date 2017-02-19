@@ -1,4 +1,5 @@
-import random
+import json
+import random, logging
 
 from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.common.by import By
@@ -60,3 +61,13 @@ def get_user_agent():
         "Mozilla/5.0 (Linux; U; Android 2.2; en-us; SCH-I800 Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1",
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
     ])
+
+
+def write_cookies_to_file(cookies, file='cookies.txt'):
+    try:
+        with open(file, 'w') as f:
+            f.write(json.dumps(cookies) + "\n")
+            f.close()
+    except Exception as e:
+        logging.error(e)
+        return None

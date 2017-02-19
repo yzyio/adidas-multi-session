@@ -1,4 +1,4 @@
-<b>UPDATE:</b> Wait for the final V0.2 release to test!
+<b>Current version:</b> V0.2 (beta)
 
 <p align="center"><img src="http://tools.yzy.io/assets/github.png"></p>
 
@@ -28,27 +28,24 @@ If you use this script for the first time, following these instructions. Make su
 * Download or clone this repository. And put it in a folder.
 * Open a cmd/terminal window and go to the folder where the project files are located.
 * Run `pip install -r requirements.txt`
-* Mac OS: Put the PhantomJS and chromedriver in the bin folder.
-* Windows: Put the PhantomJS.exe and chromedriver.exe in your C:\ folder.
-Now edit `config.py`. Set PHANTOM_JS_LOCATION to `C:\phantomjs.exe` and CHROMEDRIVER_LOCATION to `C:\chromedriver.exe`
-* Edit `config.py` and fill in the PRODUCT_URL and PROXIES. Make sure USE_PROXIES is set to `True`
+* Put the PhantomJS(.exe for windows) and chromedriver(.exe for windows) in the adidas-multi-session folder (same folder where the run.py is located).
 * Run `python run.py` in cmd/terminal to start the script.
 
 ### Update instructions
 
 * Download/clone this repository. Overwrite existing files.
 * Run `pip install -r requirements.txt`
-* Edit `config.py` file with your settings.
 * Run `python run.py` in cmd/terminal to start the script.
 
 
-### Running instructions
+### About
 
-* Every x seconds the script will check for the hmac cookie.
+* Every x seconds the script will check for the hmac cookie or captcha field.
+* If not found it will delete all cookies and try again, maximum 5 times and than try next IP/Proxy.
 * If the cookie is found, the session will be transferred to a Chrome session.
-* If you are using a proxy with authentication, you need to login first.
-The credentials are printed in the console.
+* If you are using a proxy with authentication, you need to login first. The credentials are printed in the console.
 * It will load the page with the cookies / ip / user-agent from the session that got past splash.
+* If any problem occurs the cookies are also saved to cookies.txt. If there is no option to select size after opening chrome try adding it through wishlist or with Solemartyr's script.
 
 
 ## Extra
@@ -60,11 +57,15 @@ It is never tested on a live release. So it is possible it won't work at all, wi
 A 'bypass' does not exists (atm) and all the popular ATC/Cook Groups/Mafias are using this same method but on a much larger scale.
 
 #### Do I really need proxies?
-You can also use sessions, set USE_PROXIES to `False` and NUM_SESSION to your liking. However all sessions are from the same IP.
+Yes. Using the same IP doesn't make a difference.
 
 #### Where can I buy proxies?
-I used <a href="https://www.myprivateproxy.net/billing/aff.php?aff=1840">MyPrivateProxy</a> to test.
-I will update this README with more proxy providers. Make sure you pick sneaker proxies that work on adidas.
+For US, CA, DE, NL and UK: <a href="https://www.yourprivateproxy.com/idevaffiliate/idevaffiliate.php?id=1296">YourPrivateProxy</a>.
+MyPrivateProxy (MPP): <a href="https://www.myprivateproxy.net/billing/aff.php?aff=1840">MyPrivateProxy</a>.
+I will update this README with more proxy providers. Make sure you pick sneaker proxies that work on adidas (for MPP).
+
+#### I get Python 2/3 errors / Selenium says it's not installed
+Make sure you use Python <b>3</b>. Run pip -V to see your Python version. If it says Python 2 search on Google how to change your default Python version for your platform.
 
 ### Disclaimer
 Use at your own risk.
