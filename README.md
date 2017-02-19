@@ -28,7 +28,7 @@ If you use this script for the first time, following these instructions. Make su
 * Download or clone this repository. And put it in a folder.
 * Open a cmd/terminal window and go to the folder where the project files are located.
 * Run `pip install -r requirements.txt`
-* Put the PhantomJS(.exe for windows) and chromedriver(.exe for windows) in the adidas-multi-session folder (same folder where the run.py is located).
+* Put the PhantomJS(.exe for windows) and chromedriver(.exe for windows) in a folder named 'bin' in the adidas-multi-session folder.
 * Run `python run.py` in cmd/terminal to start the script.
 
 ### Update instructions
