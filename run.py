@@ -73,7 +73,7 @@ if __name__ == '__main__':
         try:
             browser.get(PRODUCT_URL)
 
-            if 'YOU HAVE BEEN BLOCKED' in browser.page_source.upper():
+            if ('YOU HAVE BEEN BLOCKED' in browser.page_source.upper()) or ('a security issue was automatically identified' in browser.page_source.lower()):
                 logging.error('[{}/{}] Proxy Banned on {}'.format(i + 1, len(proxies), PRODUCT_URL))
                 continue
 
