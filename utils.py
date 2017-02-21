@@ -1,5 +1,4 @@
-import json
-import random, logging
+import json, random, logging, os
 
 from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.common.by import By
@@ -26,6 +25,10 @@ def import_proxies_from_file(file='proxies.txt'):
     except Exception as e:
         return None
 
+def find_path(name):
+    for root, dirs, files in os.walk(os.getcwd()):
+        if name in files:
+            return os.path.join(root, name)
 
 def get_desired_capabilities_phantom(user_agent):
     desired_capabilities = dict(DesiredCapabilities.PHANTOMJS)

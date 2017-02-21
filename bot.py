@@ -9,7 +9,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 
-from utils import write_cookies_to_file
+from utils import write_cookies_to_file, find_path
 
 opened_sessions = []
 
@@ -26,7 +26,7 @@ def transfer_session(browser):
     chrome_options = Options()
     chrome_options.add_argument("user-agent={}".format(browser['user_agent']))
     # chrome_options.add_argument("--proxy-server=http://{}".format(browser['proxy'][0]))
-    chrome = webdriver.Chrome(executable_path='bin/chromedriver', chrome_options=chrome_options)
+    chrome = webdriver.Chrome(executable_path=find_path('chromedriver'), chrome_options=chrome_options)
 
     # Open URL and wait for proxy login
     chrome.get(url)
