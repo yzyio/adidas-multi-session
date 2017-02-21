@@ -2,6 +2,7 @@ import sys, logging
 
 _V = '0.2'
 PRODUCT_URL = 'http://www.adidas.com/yeezy'
+# PRODUCT_URL = 'http://www.adidas.com/yeezy'
 # PRODUCT_URL = 'http://tools.yzy.io/hmac.html'
 
 if sys.version_info <= (3, 0):
@@ -55,7 +56,7 @@ if __name__ == '__main__':
 
         # Proxy testing
         try:
-            browser.get('http://ipecho.net/plain')
+            browser.get('https://wtfismyip.com/text')
             element = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "pre")))
 
             if not element:
