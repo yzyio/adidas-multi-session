@@ -58,7 +58,7 @@ def start_session(url, browser):
             while tries < 5:
                 # Check for captcha field
                 try:
-                    captcha = WebDriverWait(browser, 5).until(EC.presence_of_element_located((By.ID, "captcha")))
+                    captcha = "captcha-container clearfix" in browser['browser'].page_source.lower()
 
                     if captcha:
                         opened_sessions.append(browser['browser'])
