@@ -1,3 +1,5 @@
+JOIN OUR DISCORD!!! https://discord.gg/Ehcsf87
+
 <b>Current version:</b> V0.2 (beta)
 
 <p align="center"><img src="http://tools.yzy.io/assets/github.png"></p>
