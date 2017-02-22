@@ -1,4 +1,4 @@
-Join our discord for help or other things: https://discord.gg/Ehcsf87
+JOIN OUR DISCORD!!! https://discord.gg/Ehcsf87
 
 <b>Current version:</b> V0.2 (beta)
 
