@@ -1,4 +1,4 @@
-<b>Current version:</b> V0.2 (beta)
+<b>Current version:</b> V0.22 (beta)
 
 <p align="center"><img src="http://tools.yzy.io/assets/github.png"></p>
 
@@ -28,7 +28,7 @@ If you use this script for the first time, following these instructions. Make su
 * Download or clone this repository. And put it in a folder.
 * Open a cmd/terminal window and go to the folder where the project files are located.
 * Run `pip install -r requirements.txt`
-* Put the PhantomJS(.exe for windows) and chromedriver(.exe for windows) in a folder named 'bin' in the adidas-multi-session folder.
+* Put the PhantomJS(.exe for windows) and chromedriver(.exe for windows) in the adidas-multi-session folder.
 * Run `python run.py` in cmd/terminal to start the script.
 
 ### Update instructions
@@ -60,8 +60,8 @@ A 'bypass' does not exists (atm) and all the popular ATC/Cook Groups/Mafias are 
 Yes. Using the same IP doesn't make a difference.
 
 #### Where can I buy proxies?
-For US, CA, DE, NL and UK: <a href="https://www.yourprivateproxy.com/idevaffiliate/idevaffiliate.php?id=1296">YourPrivateProxy</a>.
-MyPrivateProxy (MPP): <a href="https://www.myprivateproxy.net/billing/aff.php?aff=1840">MyPrivateProxy</a>.
+MyPrivateProxy (MPP): <a href="https://www.myprivateproxy.net/billing/aff.php?aff=1840">Website</a>.
+
 I will update this README with more proxy providers. Make sure you pick sneaker proxies that work on adidas (for MPP).
 
 #### I get Python 2/3 errors / Selenium says it's not installed

@@ -1,9 +1,8 @@
 import sys, logging
 from utils import find_path
 
-_V = '0.2'
+_V = '0.22'
 PRODUCT_URL = 'http://www.adidas.com/yeezy'
-# PRODUCT_URL = 'http://www.adidas.com/yeezy'
 # PRODUCT_URL = 'http://tools.yzy.io/hmac.html'
 
 if sys.version_info <= (3, 0):
@@ -52,13 +51,13 @@ if __name__ == '__main__':
 
         user_agent = get_user_agent()
         desired_capabilities = get_desired_capabilities_phantom(user_agent)
-        browser = webdriver.PhantomJS(executable_path=(find_path('phantomjs')), service_args=service_args, desired_capabilities=desired_capabilities)
+        browser = webdriver.PhantomJS(executable_path=find_path('phantomjs'), service_args=service_args, desired_capabilities=desired_capabilities)
         browser.set_page_load_timeout(30)
 
         # Proxy testing
         try:
-            browser.get('https://wtfismyip.com/text')
-            element = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "pre")))
+            browser.get('http://tools.yzy.io/ip.php')
+            element = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
             if not element:
                 logging.error('[{}/{}] Proxy could not load URL: {}'.format(i + 1, len(proxies), 'http://ipecho.net/plain'))
@@ -75,7 +74,7 @@ if __name__ == '__main__':
         try:
             browser.get(PRODUCT_URL)
 
-            if ('YOU HAVE BEEN BLOCKED' in browser.page_source.upper()) or ('a security issue was automatically identified' in browser.page_source.lower()):
+            if ('you have been blocked' in browser.page_source.lower()) or ('a security issue was automatically identified' in browser.page_source.lower()):
                 logging.error('[{}/{}] Proxy Banned on {}'.format(i + 1, len(proxies), PRODUCT_URL))
                 continue
 

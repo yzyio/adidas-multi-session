@@ -1,1 +1,6 @@
-username:password@host:port
+username:password@ip:port
+username:password@ip:port
+username:password@ip:port
+ip:port
+ip:port
+ip:port

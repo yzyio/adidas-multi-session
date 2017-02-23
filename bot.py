@@ -25,7 +25,7 @@ def transfer_session(browser):
 
     chrome_options = Options()
     chrome_options.add_argument("user-agent={}".format(browser['user_agent']))
-    # chrome_options.add_argument("--proxy-server=http://{}".format(browser['proxy'][0]))
+    chrome_options.add_argument("--proxy-server=http://{}".format(browser['proxy'][0]))
     chrome = webdriver.Chrome(executable_path=find_path('chromedriver'), chrome_options=chrome_options)
 
     # Open URL and wait for proxy login
