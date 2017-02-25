@@ -76,14 +76,15 @@ def start_session(url, browser):
                         break
 
                 if hmac_cookie_exists:
-                    opened_sessions.append(browser['browser'])
-                    threading.Thread(target=transfer_session, kwargs={'browser': browser}).start()
-                    return False
-                else:
-                    # Delete cookies and try again, seems to work these days
-                    browser['browser'].delete_all_cookies()
-                    browser['browser'].refresh()
-                    tries += 1
+                    pass
+                    # opened_sessions.append(browser['browser'])
+                    # threading.Thread(target=transfer_session, kwargs={'browser': browser}).start()
+                    # return False
+                    
+                # Delete cookies and try again, seems to work these days
+                browser['browser'].delete_all_cookies()
+                browser['browser'].refresh()
+                tries += 1
 
                 time.sleep(10)
 
