@@ -1,4 +1,4 @@
-<b>Current version:</b> V0.22 (beta)
+**Deprecated:** This software was used on the old Yeezy splash pages on Adidas. Adidas renewed their website and this software hasnt been updated since.
 
 <p align="center"><img src="http://tools.yzy.io/assets/github.png"></p>
 
